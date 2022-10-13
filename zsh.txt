@@ -1,0 +1,5 @@
+# ---- Alias ---- 
+alias la='ls -a'
+alias ozsh='open ~/.zshrc'
+alias dspurge="find . -name '.DS_Store' -type f -delete"
+alias cddata='cd ~/Library/Developer/Xcode/DerivedData'
