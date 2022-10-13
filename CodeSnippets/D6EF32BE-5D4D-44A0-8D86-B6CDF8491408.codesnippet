@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>zbasecoremodel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import CoreData
+
+protocol BaseCoreDataModel {
+    static var viewContext: NSManagedObjectContext { get }
+    func save() throws
+    func delete() throws
+}
+
+extension BaseCoreDataModel where Self: NSManagedObject {
+    
+    static var viewContext: NSManagedObjectContext {
+        &lt;#Context#&gt;
+    }
+    
+    func save() throws {
+        try Self.viewContext.save()
+    }
+    
+    func delete() throws {
+        Self.viewContext.delete(self)
+        try save()
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D6EF32BE-5D4D-44A0-8D86-B6CDF8491408</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BaseCoreDataModel</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string></string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    func createDefaults(){
+        createPlant(with: "Dusty", image: #imageLiteral(resourceName: "dusty"))
+        createPlant(with: "Temp", image: #imageLiteral(resourceName: "neon"))
+        createPlant(with: "Snake", image: #imageLiteral(resourceName: "plant-1"))
+        createPlant(with: "Mason", image: #imageLiteral(resourceName: "mason"))
+        createPlant(with: "Mr. Plant", image: #imageLiteral(resourceName: "mrPlant"))
+        createPlant(with: "Neon", image: #imageLiteral(resourceName: "neon"))
+        createPlant(with: "Rhoa", image: #imageLiteral(resourceName: "rhoa"))
+        createPlant(with: "Green Beard", image: #imageLiteral(resourceName: "greenBeard"))
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>28BCDD97-BC5B-40B9-A889-87BFB7F74C7F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create Mock Tierra Data</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

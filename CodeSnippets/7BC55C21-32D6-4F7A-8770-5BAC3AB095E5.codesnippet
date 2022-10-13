@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>zresultsController</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension &lt;#TableViewController#&gt;: NSFetchedResultsControllerDelegate {
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController&lt;NSFetchRequestResult&gt;) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController&lt;NSFetchRequestResult&gt;) {
+        tableView.endUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController&lt;NSFetchRequestResult&gt;, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .delete:
+            guard let indexPath = indexPath else { break }
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        case .insert:
+            guard let indexPath = newIndexPath else { break }
+            tableView.insertRows(at: [indexPath], with: .automatic)
+        case .move:
+            guard let oldIndexPath = indexPath, let newIndexPath = newIndexPath else { break }
+            tableView.moveRow(at: oldIndexPath, to: newIndexPath)
+        case .update:
+            guard let indexPath = indexPath else { break }
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        @unknown default:
+            fatalError()
+        }
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7BC55C21-32D6-4F7A-8770-5BAC3AB095E5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>TableView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NSFetchedResultsController</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

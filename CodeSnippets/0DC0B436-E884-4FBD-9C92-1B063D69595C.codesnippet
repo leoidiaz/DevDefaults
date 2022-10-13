@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>zdidChangeSectionInfo</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    func controller(_ controller: NSFetchedResultsController&lt;NSFetchRequestResult&gt;, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+
+        switch type {
+            case .insert:
+                tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
+            case .delete:
+                tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
+            case .move:
+                break
+            case .update:
+                break
+            @unknown default:
+                fatalError()
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0DC0B436-E884-4FBD-9C92-1B063D69595C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NSFetchedResultsSectionInfo</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

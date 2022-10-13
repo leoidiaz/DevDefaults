@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>zNetworkManager</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>protocol NetworkManager {
+    func perform(_ request: URLRequest, completion: @escaping (Result&lt;Data, &lt;#ErrorType#&gt;&gt;) -&gt; Void)
+}
+
+extension NetworkManager {
+    func perform(_ request: URLRequest, completion: @escaping (Result&lt;Data, &lt;#ErrorType#&gt;&gt;) -&gt; Void) {
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
+                completion(.failure(.thrownError(error)))
+            }
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            completion(.success(data))
+        }.resume()
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>22A26621-5A85-4444-9D61-61641BDE62BB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Network Manager</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

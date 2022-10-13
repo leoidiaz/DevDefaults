@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>zResumeDataTask</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func resumeDataTask(withRequest request: URLRequest, completion: @escaping(Result&lt;Data, &lt;#ProjectError#&gt;&gt;) -&gt; Void){
+    let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        if let error = error {
+            print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
+            completion(.failure(.thrownError(error)))
+        } else if let data = data {
+            completion(.success(data))
+        }
+    }
+    dataTask.resume()
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>14A4ED8C-FE5E-4BD1-A478-FEAB8CCDF95C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Generic Data</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Resume Data Task</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

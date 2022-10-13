@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>zPersistentLoad</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func loadFromPersistence() {
+        let decoder = JSONDecoder()
+        do {
+            let data = try Data(contentsOf: &lt;#URL File#&gt;)
+            let decodedData = try decoder.decode([&lt;# Model Name #&gt;].self, from: data)
+            &lt;# Source #&gt; = decodedData
+        } catch {
+            print(error.localizedDescription)
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>AC9F7A08-2C60-4120-A6E2-E31AA4508D4F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>PersistenceLoad</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

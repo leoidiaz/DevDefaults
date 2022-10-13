@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>zqueryItem</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
+
+let queryItem = URLQueryItem(name: StarshipConstants.queryItem1, value: searchTerm)
+
+urlComponents?.queryItems = [queryItem]
+
+guard let finalURL = urlComponents?.url else {
+    completion([]); return }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>55415679-97DC-4439-A9DE-690ED901E4D4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Search Query Item</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
